@@ -1,0 +1,57 @@
+/* ESTILOS TABLET Y SIMILARES */
+
+/* ocultamos elementos */
+
+#redesMovil {
+	display: none;
+}
+
+#socialMovil ul {
+	display: none;
+}
+
+#navegacionPC {
+	display:none;
+}
+
+
+/* encabezado y navegación */
+
+#encabezado .nombre {
+	font-size: 1.2em;
+}
+
+nav#navegacion li {
+	float: left;
+	display: block;
+	width: 25%;
+	text-align: center;
+	background-color: #FCF9F9;
+	
+}
+
+nav#navegacion ul li a:link, nav ul li a:visited {
+	display: block;
+	font-size: 1em;
+	color: #1C1C1C;
+	padding: 0.5em 0 0.5em 0.5em;
+	border-right: #484747 1px solid;
+}
+
+nav#navegacion ul li a:hover, nav ul li a:active {
+	background-color: #E19D16;
+	color: #F3F1F0;
+}
+
+/* contenido principal */
+
+.columna {
+	display: block;
+	margin: 1em auto;
+	width: 90%;
+	text-align:center;
+}
+
+article h2 {
+	font-size: 2.3em;
+}

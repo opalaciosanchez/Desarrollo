@@ -1,0 +1,307 @@
+/* Importamos las CCS de consultas de medios para mayor claridad */
+@import url("movil.css") screen and (max-width: 550px);
+@import url("tablet.css") screen and (min-width: 551px) and (max-width: 800px);
+@import url("equipo.css") screen and (min-width: 801px);
+
+/* tipografías */
+
+/* fuente con variantes para probar en diversos dispositivos -fontsquirrel.com- */
+@font-face {
+    font-family: 'open-sans-light';
+    src: url('../fuentes/open-sans/OpenSans-Light-webfont.eot');
+    src: url('../fuentes/open-sans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fuentes/open-sans/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fuentes/open-sans/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fuentes/open-sans/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+}
+
+/* fuente con licencia de una variante -google fonts- */
+
+@font-face {
+	font-family: 'open-sans-semi';
+	src: url('../fuentes/open-sans/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'lato-regular';
+	src: url('../fuentes/Lato/Lato-Regular.ttf') format('truetype');	
+}
+
+@font-face {
+	font-family: 'lato-light';
+	src: url('../fuentes/Lato/Lato-Light.ttf') format('truetype');
+}
+
+
+/* ESTRUCTURA INDEPENDIENTE DE DISPOSITIVO */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-size: 100%;
+	background-color: #F3F1F0;
+	width: 100%;
+}
+
+header, footer {
+	background-color: #1C1C1C;
+	color: #F3F1F0;
+	padding: 0.5em 2.5%;
+}
+
+header {
+	height: 1.5em;
+}
+
+section {
+ clear: both;
+ font-family: open-sans-light, sans-serif;
+ font-size: 0.9em;
+}
+
+figcaption {
+	width: 100%;
+	text-align: center;
+	margin: -8px auto 0 auto;
+	padding: 0.2em 0;
+	background: #484747;
+	color: #F3F1F0;
+	font-size: 0.8em;
+}
+
+/* encabezado */
+
+header {
+	box-shadow: 0px 1px 6px #000;
+	-webkit-box-shadow: 0px 2px 6px #000;
+}
+
+#encabezado .nombre {
+	font-family: 'lato-light', sans-serif;
+	/* font-size: 1.2em; */
+	float: left;
+}
+
+.nombreDestacado {
+	color: #E19D16;
+}
+
+#redes {
+	float: right;
+	font-variant: small-caps;
+}
+
+/* enlaces en encabezado */
+
+#redes li {
+	list-style: none;
+	float:left;
+	display: block;
+}
+
+#redes li a:link, #redes li a:visited {
+	font-family: 'lato-light', sans-serif;
+	font-size: 1em;
+	color: #F3F1F0;
+	text-decoration: none;
+	padding: 0 0.5em;
+}
+
+#redes li a:hover, #redes li a:active {
+	color: #E19D16;
+}
+
+#redes li a.derecha {
+	border: 0;
+}
+
+/* navegación principal */
+
+nav#navegacion {
+	clear: both;
+}
+nav li {
+	list-style: none;
+}
+nav ul li a:link, nav ul li a:visited {
+	text-decoration: none;
+	font-family: open-sans-regular, sans-serif;
+	font-variant: small-caps;
+}
+
+nav ul li a:hover  {
+	text-decoration: none;
+	font-family: open-sans-regular, sans-serif;
+}
+
+#banner img {
+	width: 100%;
+	box-shadow: 0px 1px 6px #000;
+	-webkit-box-shadow: 0px 2px 6px #000;
+}
+
+/* estilos generales de cuerpo de la página */
+
+section {
+	text-align: justify;
+}
+
+article#datos, article#profesional, article#multimedia {
+	padding: 1em 6%;
+    background-color: #fff;
+}
+
+
+article h2, h2.encabezadoprincipal {
+	font-variant: small-caps;
+	font-family: open-sans-light, sans-serif;
+	color: #484747;
+	text-align: center;
+	margin: 0.5em auto 0.7em auto;
+}
+
+h2.encabezadoprincipal {
+	font-size: 3em;
+}
+
+article h2 {
+	border-bottom: 1px #484747 solid;
+	width: 50%;
+	float: none;
+}
+
+article li {
+	list-style: none;
+}
+
+article a:link.volver, a:visited.volver {
+	font-variant: small-caps;
+	font-family: open-sans-semi, verdana, sans-serif;
+	text-decoration: none;
+	font-size: 1.1em;
+	color: #E19D16;
+	border-color: #484747;
+	border-radius: 5px;
+	border: thin solid #fff;
+	padding: 0.2em 0.7em;
+	background-color: #FFFFFF
+}
+
+.alineado {
+	text-align: right;
+}
+
+article a:hover.volver {
+	color: #484747;
+	border: thin solid #E19D16;
+}
+
+.destacado {
+	font-family: open-sans-semi, sans-serif;
+}
+
+/* estilos página CV */
+
+h3.experiencia {
+	font-family: lato-regular, sans-serif;
+	font-size: 1.2em;
+	color: #E19D16;
+}
+
+.detalleExperiencia li {
+	margin-left: 1em;
+	font-family: open-sans-light, "Lucida Sans Regular", sans-serif;
+	color: #484747;
+	font-size: 1em;
+}
+
+/* estilos generales multimedia */
+
+#multimedia {
+	background-color: #FCF9F9;
+}
+
+.columna, .columna img, .columna video {
+    width: 100%;
+} 
+
+.columna figure {
+	border: 5px #F3F1F0 solid;
+	box-shadow: #484747 0 2px 7px;
+}
+
+
+/* estilos generales pie */
+
+footer#pie {
+	padding: 2em 0;
+}
+
+footer#pie p {
+	clear: both;
+	font-family: 'lato-light', sans-serif;
+	font-size: 1em;
+	text-align: center;
+}
+
+footer#pie a:link, #pie a:visited {
+	text-decoration: none;
+	color: #F3F1F0;	
+}
+
+footer#pie a:hover, a:active {
+	color: #E19D16;
+}
+
+/* estilos generales de formulario */
+
+#tpv h3 {
+    text-align: center;
+    margin: 0 auto 1em auto;
+    color: #E19D16;
+}
+
+div.form {
+    display: block;
+    width: 80%;
+    margin: 0 auto 2em auto;
+}
+
+form p {
+    margin: 0 0 1em 0;
+}
+
+label {
+    text-transform: uppercase;
+    font-family: 'lato-regular', sans-serif;
+    display: block;
+    text-align: left;
+    width: 98%;
+    margin-bottom: 0.7em;
+}
+
+input, textarea {
+    font-family: open-sans-light, sans-serif;
+    font-size: 0.9em;
+    width: 98%;
+    padding: 0.2em 0 0.2em 2% ; 
+}
+
+input[type=submit] {
+    color: #fff;
+    width: 100%;
+    height: 1.5em;
+}
+
+
+
+
+
+
+
+
+    

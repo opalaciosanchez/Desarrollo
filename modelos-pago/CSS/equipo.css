@@ -1,0 +1,108 @@
+/* ocultamos elementos móviles */
+
+#redesMovil {
+	display: none;
+}
+
+#socialMovil ul {
+	display: none;
+}
+
+.volver {
+	display: none;
+}
+
+nav#navegacion {
+	display: none;
+}
+
+/* menús principales */
+
+#encabezado .nombre {
+	font-size: 1.3em;
+}
+
+nav#navegacionPC  {
+	float: right;
+	width: 25%;
+}
+
+nav#navegacionPC li {
+	/*width: 97%;*/
+	/*padding: 0.5em 0.2em;*/
+	margin-bottom: 0.5em;
+	text-align: right;
+}
+
+nav#navegacionPC ul li a:link, nav ul li a:visited {
+	display: block;
+	font-family: lato-light;
+	font-size: 1.3em;
+	color: #F3F1F0;
+	background-color: #E19D16;
+	padding: 1em 0.5em;
+}
+
+nav#navegacionPC ul li a:hover, nav ul li a:active {
+	display: block;
+	background-color: #484747;
+	color: #F3F1F0;
+}
+
+
+/* contenidos */
+
+#datos, #profesional, #multimedia {
+   float: left;
+   width: 63%;
+}
+
+article#datos h2, article#profesional h2, article#multimedia h2 {
+	font-size: 2.3em;
+	margin-top: 0.5em;
+	margin-right: 0;
+	margin-left: 0;
+	margin-bottom: 0.5em;
+	border-bottom: none;
+	text-align: left;
+}
+
+/* tpv */
+
+#tpv div.form {
+    display: block;
+    float: left;
+    width: 73%;
+    margin-left: 2%;
+}
+
+#tpv div.form label {
+    display: block;
+    float: left;
+    width: 20%;
+}
+
+#tpv div.form input, #tpv div.form textarea {
+    display: block;
+    width: 73%;
+    padding: 0.2em 0 0.2em 2% ; 
+}
+
+#tpv div.form input[type=submit] {
+    color: #fff;
+    width: 95%;
+    height: 1.5em;
+}
+
+
+/* multimedia */
+
+#multimedia {
+    overflow: auto;
+}
+
+/* pie de pagina */
+
+footer {
+	clear:both;
+}
