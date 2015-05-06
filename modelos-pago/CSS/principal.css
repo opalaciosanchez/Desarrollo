@@ -63,16 +63,6 @@ section {
  font-size: 0.9em;
 }
 
-figcaption {
-	width: 100%;
-	text-align: center;
-	margin: -8px auto 0 auto;
-	padding: 0.2em 0;
-	background: #484747;
-	color: #F3F1F0;
-	font-size: 0.8em;
-}
-
 /* encabezado */
 
 header {
@@ -150,9 +140,8 @@ section {
 	text-align: justify;
 }
 
-article#datos, article#profesional, article#multimedia {
+article#tpv {
 	padding: 1em 6%;
-    background-color: #fff;
 }
 
 
@@ -204,37 +193,6 @@ article a:hover.volver {
 	font-family: open-sans-semi, sans-serif;
 }
 
-/* estilos página CV */
-
-h3.experiencia {
-	font-family: lato-regular, sans-serif;
-	font-size: 1.2em;
-	color: #E19D16;
-}
-
-.detalleExperiencia li {
-	margin-left: 1em;
-	font-family: open-sans-light, "Lucida Sans Regular", sans-serif;
-	color: #484747;
-	font-size: 1em;
-}
-
-/* estilos generales multimedia */
-
-#multimedia {
-	background-color: #FCF9F9;
-}
-
-.columna, .columna img, .columna video {
-    width: 100%;
-} 
-
-.columna figure {
-	border: 5px #F3F1F0 solid;
-	box-shadow: #484747 0 2px 7px;
-}
-
-
 /* estilos generales pie */
 
 footer#pie {
@@ -282,6 +240,12 @@ label {
     text-align: left;
     width: 98%;
     margin-bottom: 0.7em;
+}
+
+div.procesado label {
+	display: inline-block;
+	width: 5%;
+	padding-left: 2em;
 }
 
 input, textarea {
