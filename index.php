@@ -5,6 +5,6 @@
 	<title>Pasarela de pago segura</title>
 </head>
 <body>
-
+<h1>Pasarela de pago</h1>
 </body>
 </html>

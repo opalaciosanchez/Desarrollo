@@ -1,6 +1,6 @@
-<?php 
-	require_once 'php/conexion/class.Database.php';
-	require_once 'php/class.Functions.php';
+<?php
+require_once 'php/conexion/class.Database.php';
+require_once 'php/class.Functions.php';
 ?>
 <!doctype html>
 <html>
@@ -59,28 +59,16 @@
 </nav> -->
 <!--fin de navegacionPC-->
 
-<article id="tpv">
-<h3>Todos los campos son obligatorios</h3>
-<div class="form">
-<form name="tpv" action="mailto:profesor.zgz@gmail.com" method="POST">
-    <p><label for="nombre">Nombre</label><input type="text" id="nombre" required placeholder="nombre completo"/></p>
-    <p><label for="email">Email</label><input type="email" id="email" required placeholder="inserta el email"/></p>
-    <p>
-        <label for="list">Escoge el producto</label><input list="tipo" id="list" required/>
-        <?php Functions::listado('productos'); ?>
-<!-- 
-        <datalist id="tipo">  	
-            <option label="Diseño" value="Diseño">Diseño</option>
-            <option label="Hardware" value="Hardware">Hardware</option>
-            <option label="Redes" value="Redes">Redes</option> 
--->
-        </datalist>    
-    </p>
-    <p><label for="consulta">Cuéntame</label><textarea id="consulta" rows="6" cols="10" required placeholder="tus dudas, aquí"></textarea></p>
-    <p><input type="submit" id="envio" value="Enviar"></p>
-</form>
-</div>
-</article>
+<article id="tpv"> <h3>Todos los campos son obligatorios</h3> <div class="form"> <form name="tpv"
+action="" method="POST">     <p><label for="nombre">Nombre</label><input type="text"
+id="nombre" required placeholder="nombre completo"/></p>
+<p><label for="email">Email</label><input type="email"
+id="email" required placeholder="inserta el email"/></p>
+<label for="list">Escoge el producto</label><input
+list="tipo" id="list" required/><?php Functions::listado('productos');?></p>
+<p><label
+for="consulta">Indicaciones</label><textarea id="consulta" rows="6" cols="10" required placeholder="tus comentarios, aquí">
+</textarea></p> <p><input type="submit" id="envio" value="Enviar"></p> </form> </div> </article>
 
 </section><!-- fin de section -->
 

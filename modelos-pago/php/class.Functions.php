@@ -47,17 +47,17 @@ class Functions {
 		// almacenamos en la salida el resultado de ejecutar el método que muestra por pantalla los resultados
 		// como parámetro usamos los resultados almacenados en la variable anterior de la llamada a la primera función
 		$output = self::salida($te_set);
-		return $output;
+		echo $output;
 	}
 
 	// metodo que utiliza los resultados de la consulta y los muestra por pantalla
 	public static function salida($tipo) {
-		$output = "";
+		$output = "<datalist id='tipo'>";
 		while ($producto = mysqli_fetch_array($tipo)) {
-			echo $producto[1];
-			//$output .= "
-			//<option label='{$producto[1]}' value='{$producto[1]}'>{$producto[1]}</option>";
+			$output .= '<option label="'.$producto[1].'" value="'.$producto[1].'">'.$producto[1].'</option>';
+			// echo "<li>{$producto[1]}</li>";
 		}
+		$output .= "</datalist>";
 		return $output;
 	}
 
