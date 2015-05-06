@@ -41,24 +41,46 @@ class Functions {
 	}
 
 	// llamada a todos los productos
-	public static function listado($tabla) {
+	public static function listado($tabla, $columna) {
 		// llamamos en cada caso al método que ejecuta la consulta de productos, pasando como argumento el tipo de éste
 		$te_set = self::consulta($tabla);
 		// almacenamos en la salida el resultado de ejecutar el método que muestra por pantalla los resultados
 		// como parámetro usamos los resultados almacenados en la variable anterior de la llamada a la primera función
-		$output = self::salida($te_set);
-		echo $output;
+		$salida = self::salida($te_set);
+
+		if ($columna == 1) {
+			echo $salida['output'];
+		} elseif ($columna == 0) {
+			$id = self::idHidden($salida['hidden']);
+			echo $id;
+		}
+
 	}
 
 	// metodo que utiliza los resultados de la consulta y los muestra por pantalla
 	public static function salida($tipo) {
-		$output = "<datalist id='tipo'>";
+		$hidden = "";
+		$output = "<select id='tipo'>";
 		while ($producto = mysqli_fetch_array($tipo)) {
 			$output .= '<option label="'.$producto[1].'" value="'.$producto[1].'">'.$producto[1].'</option>';
-			// echo "<li>{$producto[1]}</li>";
+			$hidden .= $producto[0];
 		}
-		$output .= "</datalist>";
-		return $output;
+		$output .= "</select>";
+
+		return $salida = array('output' => $output, 'hidden' => $hidden);
+	}
+
+	// método que muestra la id del producto seleccionado
+	public static function idHidden($id) {
+		$mysqli     = self::_establecerConexion();
+		$query      = "SELECT precio FROM productos WHERE idProducto = 100";
+		$result_set = mysqli_query($mysqli, $query);
+		self::confirma_consulta($result_set);
+		$idHidden = "";
+		while ($id = mysqli_fetch_array($result_set)) {
+			$idHidden = $id[0];
+		}
+		return $idHidden;
 	}
 
 	/* ESTA SECCIÓN CONTROLA EL FILTRADO DE LOS PRODUCTOS SEGÚN EL FORMULARIO DE ESA MISMA PÁG */

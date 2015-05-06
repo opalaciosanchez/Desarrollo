@@ -284,11 +284,18 @@ label {
     margin-bottom: 0.7em;
 }
 
-input, textarea, option {
+input, textarea {
     font-family: open-sans-light, sans-serif;
     font-size: 0.9em;
     width: 98%;
     padding: 0.2em 0 0.2em 2% ; 
+}
+
+select {
+	font-family: open-sans-light, sans-serif;
+	font-size: 0.9em;
+	width: 75%;
+	padding: 0.2em 0 0.2em 2% ; 
 }
 
 input[type=submit] {

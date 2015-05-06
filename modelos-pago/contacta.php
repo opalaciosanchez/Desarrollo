@@ -59,16 +59,27 @@ require_once 'php/class.Functions.php';
 </nav> -->
 <!--fin de navegacionPC-->
 
-<article id="tpv"> <h3>Todos los campos son obligatorios</h3> <div class="form"> <form name="tpv"
-action="" method="POST">     <p><label for="nombre">Nombre</label><input type="text"
-id="nombre" required placeholder="nombre completo"/></p>
-<p><label for="email">Email</label><input type="email"
-id="email" required placeholder="inserta el email"/></p>
-<label for="list">Escoge el producto</label><input
-list="tipo" id="list" required/><?php Functions::listado('productos');?></p>
-<p><label
-for="consulta">Indicaciones</label><textarea id="consulta" rows="6" cols="10" required placeholder="tus comentarios, aquí">
-</textarea></p> <p><input type="submit" id="envio" value="Enviar"></p> </form> </div> </article>
+<article id="tpv"> <h3>Todos los campos son obligatorios</h3>
+
+<div class="form"> <form name="tpv" action="" method="POST">
+
+<p><label for="nombre">Nombre</label><input type="text" id="nombre" required placeholder="nombre completo"/></p>
+<p><label for="email">Email</label><input type="email" id="email" required placeholder="inserta el email"/></p>
+<p>
+<label for="list">Escoge el producto</label>
+<?php Functions::listado('productos', 1);?>
+</p>
+<p>
+  <label for="consulta">Indicaciones</label><textarea id="consulta" rows="6" cols="10" required placeholder="tus comentarios, aquí"></textarea>
+</p>
+<p>
+  <label for="precio">Precio</label><input type="text" id="precio" name="precio" value="<?php Functions::listado('productos', 0)?>">
+</p>
+<p><input type="submit" id="envio" value="Enviar"></p>
+
+</form>
+</div>
+</article>
 
 </section><!-- fin de section -->
 
