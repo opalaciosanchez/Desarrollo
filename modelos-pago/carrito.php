@@ -38,32 +38,32 @@ $operacion = rand(1000, 100000);
 <p><label for="email">Email</label><input type="email" name="email" id="email" required placeholder="inserta el email"/></p>
 <p>
 <p>
-  <label for="PAN">Número de tarjeta</label>
-  <input type="text" name="PAN" id="PAN" required placeholder="Inserte su número de tarjeta">
+  <label for="PAN">Nº tarjeta</label>
+  <input type="number" name="PAN" id="PAN" required placeholder="Inserte su número de tarjeta">
 </p>
 <p>
-  <label for="Caducidad">Fecha de caducidad</label>
-  <input type="text" name="caducidad" id="caducidad" required placeholder="Formato AAAAMM" maxlength="6" style="width:20%;">
+  <label for="Caducidad">caducidad</label>
+  <input type="number" name="caducidad" id="caducidad" required placeholder="Formato AAAAMM" maxlength="6" style="width:20%;">
 </p>
 <p>
-  <label for="CVV2">Digito de control</label>
-  <input type="text" name="CVV2" id="CVV2" required placeholder="Formato NNN" maxlength="3" style="width:20%;">
+  <label for="CVV2">Digito control</label>
+  <input type="number" name="CVV2" id="CVV2" required placeholder="Formato NNN" maxlength="3" style="width:20%;">
 </p>
-<label for="list">Escoge el producto</label>
+<label for="list">producto</label>
 <?php Functions::listado('productos', 1);?>
 </p>
 <p>
   <label for="consulta">Indicaciones</label><textarea id="consulta" rows="6" cols="10" placeholder="tus comentarios, aquí"></textarea>
 </p>
 <p>
-  <label for="precio">Precio</label><input style="width:30%;" type="text" id="precio" name="precio" value="<?php Functions::listado('productos', 0)?>">
+  <label for="precio">Precio</label><input style="width:20%;" type="number" id="precio" name="precio" value="<?php Functions::listado('productos', 0)?>">
 </p>
 <p>
-  <label for="unidades">Unidades</label><input style="width:30%;" type="text" id="unidades" name="unidades">
+  <label for="unidades">Unidades</label><input style="width:20%;" type="number" id="unidades" name="unidades">
 </p>
 
 <p>
-  <label for="importe">Importe Total</label><input style="width:30%;" type="text" id="importe" name="importe">
+  <label for="importe">Importe Total</label><input style="width:20%;" type="number" id="importe" name="importe">
 </p>
 
 <p><input type="submit" id="comprar" name="comprar" value="COMPRAR"></p>
