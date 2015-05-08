@@ -2,33 +2,10 @@
 require_once 'php/includes/header.php';
 $operacion = rand(1000, 100000);
 ?>
-<!--fin socialMovil-->
-
-<!-- <nav id="navegacion">
-  <ul>
-    <li><a href="index.html">quien soy</a></li>
-    <li><a href="profesional.html">curriculum</a></li>
-    <li><a href="contacta.html">contacta</a></li>
-    <li><a href="multimedia.html">multimedia</a></li>
-  </ul>
-</nav> -->
-<!--fin de navegacion ppal-->
-
-<!-- <div id="banner"> <img src="imagenes/logo.jpg" alt=""> </div> -->
 
 <section id="contenido">
 
 <h2 class="encabezadoprincipal">CARRITO</h2>
-
-<!-- <nav id="navegacionPC">
-  <ul>
-    <li><a href="index.html">quien soy</a></li>
-    <li><a href="#profesional.html">curriculum</a></li>
-    <li><a href="#contacta.html">contacta</a></li>
-    <li><a href="multimedia.html">multimedia</a></li>
-  </ul>
-</nav> -->
-<!--fin de navegacionPC-->
 
 <article id="tpv"> <h3>Nº de operación: <?php echo $operacion;?></h3>
 
@@ -39,15 +16,15 @@ $operacion = rand(1000, 100000);
 <p>
 <p>
   <label for="PAN">Nº tarjeta</label>
-  <input type="number" name="PAN" id="PAN" required placeholder="Inserte su número de tarjeta">
+  <input type="text" name="PAN" id="PAN" required placeholder="Inserte su número de tarjeta">
 </p>
 <p>
   <label for="Caducidad">caducidad</label>
-  <input type="number" name="caducidad" id="caducidad" required placeholder="Formato AAAAMM" maxlength="6" style="width:20%;">
+  <input type="text" name="caducidad" id="caducidad" required placeholder="Formato AAAAMM" maxlength="6" style="width:20%;">
 </p>
 <p>
   <label for="CVV2">Digito control</label>
-  <input type="number" name="CVV2" id="CVV2" required placeholder="Formato NNN" maxlength="3" style="width:20%;">
+  <input type="text" name="CVV2" id="CVV2" required placeholder="Formato NNN" maxlength="3" style="width:20%;">
 </p>
 <label for="list">producto</label>
 <?php Functions::listado('productos', 1);?>

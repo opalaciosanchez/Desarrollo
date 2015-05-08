@@ -193,6 +193,17 @@ article a:hover.volver {
 	font-family: open-sans-semi, sans-serif;
 }
 
+.errorok {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.errorok a, .errorok a:hover, .errorok a:visited {
+	color: #E19D16;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
 /* estilos generales pie */
 
 footer#pie {
