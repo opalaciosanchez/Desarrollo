@@ -1,46 +1,58 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.10
+-- version 4.3.11
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost:8889
--- Tiempo de generación: 27-01-2015 a las 19:14:17
--- Versión del servidor: 5.5.38
--- Versión de PHP: 5.6.1
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 16-05-2015 a las 13:00:30
+-- Versión del servidor: 5.6.24
+-- Versión de PHP: 5.6.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
 --
--- Base de datos: `teparatodos.com`
+-- Base de datos: `pasarelapago`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `teteras`
+-- Estructura de tabla para la tabla `productos`
 --
 
-CREATE TABLE `teteras` (
-  `nombre` varchar(50) NOT NULL,
-  `imagen` varchar(50) NOT NULL,
-  `descripcion` text NOT NULL,
-  `precio` decimal(7,2) NOT NULL
+CREATE TABLE IF NOT EXISTS `productos` (
+  `idProducto` int(3) NOT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `precio` decimal(7,2) NOT NULL,
+  `imagen` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `teteras`
+-- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `teteras` (`nombre`, `imagen`, `descripcion`, `precio`) VALUES
-('Tetera Fung Ling', 'tetera-fung-ling.jpg', 'Tetera de ceramica con filtro de acero inoxidable con capacidad de 0.4L\r\nCuenco de ceramica con capacidad de 0.2L', 9.95),
-('Teteras inglesas', 'teteras_variadas.jpg', 'Teteras rojas y blancas con flores en acero esmaltado vitrificado. Con capacidad para 0.5L y 0.75L. Aptas para gas y eléctrica.', 16.50);
+INSERT INTO `productos` (`idProducto`, `nombre`, `precio`, `imagen`) VALUES
+(100, 'Bombón Orange', '5.00', 'bombon.jpg'),
+(101, 'Vainilla Black Tea', '5.95', 'vainilla.jpg'),
+(103, 'Té Rojo Puh Ehrl', '4.50', 'rojo.jpg'),
+(104, 'Oolong Chocolate', '6.00', 'oolong.jpg');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `teteras`
+-- Indices de la tabla `productos`
 --
-ALTER TABLE `teteras`
- ADD PRIMARY KEY (`nombre`);
+ALTER TABLE `productos`
+  ADD PRIMARY KEY (`idProducto`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

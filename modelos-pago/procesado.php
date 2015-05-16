@@ -11,8 +11,9 @@ if (isset($_POST['comprar'])) {
 	$PAN       = $_POST['PAN'];
 	$caducidad = $_POST['caducidad'];
 	$CVV2      = $_POST['CVV2'];
-	$importe   = $_POST['importe'];
 	$Cifrado   = "SHA1";
+	$tipo  = $_POST['tipo'];
+	$importe = intval(Functions::informacion(2, $tipo)*100);
 
   // valores aportados por el pdf y las URL para el cálculo de la firma
   $MERCHANT_ID = "082108630";
@@ -21,8 +22,8 @@ if (isset($_POST['comprar'])) {
   $TERMINAL_ID = "00000003";
   $TIPO_MONEDA = "978";
   $EXPONENTE = "2";
-  $URL_OK = "http://localhost:8888/modelos-pago/ok.php";
-  $URL_NOK = "http://localhost:8888/modelos-pago/error.php";
+  $URL_OK = "http://localhost/modelos-pago/ok.php";
+  $URL_NOK = "http://localhost/modelos-pago/error.php";
 
   // calculo de la firma
   $firma = sha1($CLAVE_ENCRIPTACION . $MERCHANT_ID . $ACQUIRER_BIN . $TERMINAL_ID . $operacion . $importe .
@@ -38,6 +39,9 @@ if (isset($_POST['comprar'])) {
   <p><label>Nombre: </label> <?php echo $nombre; ?></p>
   <p><label>Email: </label> <?php echo $email; ?></p>
   <p><label>Tarjeta: </label> <?php echo $PAN; ?></p>
+  <p><label>Producto: </label> <?php echo Functions::informacion(1, $tipo); ?></p>
+  <p><label>Importe: </label> <?php echo $importe/100; ?> €</p>
+  <p><img class="imagen" src="imagenes/<?php echo Functions::informacion(3, $tipo); ?>"></p>
 
 <div class="form">
   <form name="tpv" action="http://tpv.ceca.es:8000/cgi-bin/tpv" method="POST" enctype="application/x-www-form-urlencoded">
