@@ -1,0 +1,119 @@
+/* ESTILOS DE VISUALIZACIÓN MÓVIL */
+
+#redes {
+	display: none;
+}
+#banner {
+	display: none;
+}
+
+#navegacionPC {
+	display:none;
+}
+
+/* zona de encabezado, ppal diferencia respecto otros dispositivos */
+
+#encabezado .nombre {
+	font-size: 1em;
+}
+
+#redesMovil {
+	display: block;
+	float: right;
+	background: url(../imagenes/menu-nav) no-repeat left -13px;
+	font-family: 'lato-light', sans-serif;
+	font-size: 1em;
+	padding: 0 0 0 32px;
+}
+
+/* enlaces de redes sociales */
+
+#redesMovil a:link, #redesMovil a:visited {
+	text-decoration: none;
+	color: #E19D16;
+}
+#redesMovil a:active, #redesMovil a:hover {
+	text-decoration: none;
+	color: #F3F1F0;
+}
+
+/* menú con apertura mediante CSS3 -el cierre no es posible sin jQuery, al menos sin un hover- */
+
+#socialMovil {
+	clear: both;
+	display: none;
+	width: 45%;
+	margin: 0 auto;
+	-webkit-transition: all 0.5s ease 0.1s;
+	/*-moz-transition: background-color 0.5s ease 0.1s, display 0.5 linear;
+	-ms-transition: background-color 0.5s ease 0.1s, display 0.5 linear;
+	-o-transition: background-color 0.5s ease 0.1s, display 0.5 linear;*/
+	transition: all 0.5s ease 0.1s;	
+}
+
+#socialMovil:target {
+	display: block;
+	border-bottom: thin #000000;
+}
+
+#socialMovil li {
+	list-style-type: none;
+	float: left;
+	padding: 0.4em 2.5%;
+	margin-bottom: 1em;
+	font-size: 0.8em;
+	border-bottom: 1px solid #000;
+}
+#socialMovil a:link, #socialMovil a:visited {
+	text-decoration: none;
+	font-family: lato-light, sans-serif;
+	color: #000;
+	font-family: open-sans-semi, sans-serif;
+}
+
+#socialMovil a:hover, #socialMovil a:active {
+	color: #E19D16;
+}
+
+/* menú principal */
+
+nav#navegacion {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+nav#navegacion li {
+	border-width: thin;
+	border-color: #1C1C1C;
+	border-style: solid;
+	padding: 0.5em 0;
+	border-radius: 10px;
+	margin-top: 0.5em;
+	background-color: #1C1C1C;
+}
+
+nav#navegacion li a:link, a:visited {
+	color: #F3F1F0;
+}
+
+nav#navegacion li a:hover, a:active {
+	color: #E19D16;
+}
+
+/* zona de contenidos */
+
+article h2 {
+	font-size: 1.7em;
+}
+
+.columna {
+	display: block;
+	margin: 1em auto;
+	width: 90%;
+	text-align:center;
+}
+
+article p {
+	text-align: left;
+}
