@@ -63,16 +63,6 @@ section {
  font-size: 0.9em;
 }
 
-figcaption {
-	width: 100%;
-	text-align: center;
-	margin: -8px auto 0 auto;
-	padding: 0.2em 0;
-	background: #484747;
-	color: #F3F1F0;
-	font-size: 0.8em;
-}
-
 /* encabezado */
 
 header {
@@ -150,9 +140,8 @@ section {
 	text-align: justify;
 }
 
-article#datos, article#profesional, article#multimedia {
+article#tpv {
 	padding: 1em 6%;
-    background-color: #fff;
 }
 
 
@@ -204,36 +193,16 @@ article a:hover.volver {
 	font-family: open-sans-semi, sans-serif;
 }
 
-/* estilos página CV */
+.errorok {
+	text-align: center;
+	margin-bottom: 2em;
+}
 
-h3.experiencia {
-	font-family: lato-regular, sans-serif;
-	font-size: 1.2em;
+.errorok a, .errorok a:hover, .errorok a:visited {
 	color: #E19D16;
+	text-transform: uppercase;
+	text-decoration: none;
 }
-
-.detalleExperiencia li {
-	margin-left: 1em;
-	font-family: open-sans-light, "Lucida Sans Regular", sans-serif;
-	color: #484747;
-	font-size: 1em;
-}
-
-/* estilos generales multimedia */
-
-#multimedia {
-	background-color: #FCF9F9;
-}
-
-.columna, .columna img, .columna video {
-    width: 100%;
-} 
-
-.columna figure {
-	border: 5px #F3F1F0 solid;
-	box-shadow: #484747 0 2px 7px;
-}
-
 
 /* estilos generales pie */
 
@@ -259,7 +228,7 @@ footer#pie a:hover, a:active {
 
 /* estilos generales de formulario */
 
-#contacta h3 {
+#tpv h3 {
     text-align: center;
     margin: 0 auto 1em auto;
     color: #E19D16;
@@ -267,12 +236,22 @@ footer#pie a:hover, a:active {
 
 div.form {
     display: block;
-    width: 80%;
+    width: 60%;
     margin: 0 auto 2em auto;
+    float: left;
+    text-align: center;
 }
 
 form p {
     margin: 0 0 1em 0;
+    text-align: center;
+}
+
+div.lateral {
+	display: block;
+	width: 25%;
+	float: right;
+	margin-bottom: 2em;
 }
 
 label {
@@ -284,6 +263,12 @@ label {
     margin-bottom: 0.7em;
 }
 
+div.procesado label {
+	display: inline-block;
+	width: 10%;
+	padding-left: 2em;
+}
+
 input, textarea {
     font-family: open-sans-light, sans-serif;
     font-size: 0.9em;
@@ -291,17 +276,48 @@ input, textarea {
     padding: 0.2em 0 0.2em 2% ; 
 }
 
+select {
+	font-family: open-sans-light, sans-serif;
+	font-size: 0.9em;
+	width: 75%;
+	padding: 0.2em 0 0.2em 2% ; 
+}
+
 input[type=submit] {
+    color: #fff;
     width: 100%;
     height: 1.5em;
     background: #E19D16;
-    color: #fff;
 }
 
+/* FORMATOS DE LA ZONA DE RESPUESTA */
+#respuesta div.form {
+	width: 100%;
+	margin: 2em auto;
+}
 
+#respuesta div.form h2 {
+	font-family: open-sans-light, sans-serif;
+	font-size: 2em;
+	color: #E19D16;
+}
 
+a {
+	font-family: open-sans-light, sans-serif;
+	text-decoration: none;
+	color: #0c0c0c;
+}
 
+a:hover {
+	color: #E19D16;
+}
 
+.listado {
+	font-family: open-sans-light, sans-serif;
+	font-weight: bold;
+	font-size: 1.3em;
+	color: #E19D16;
+}
 
 
 
